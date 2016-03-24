@@ -16,7 +16,24 @@ function register_burger_style() {
 }
 add_action( 'wp_enqueue_scripts', 'register_burger_style' );
 
+// Custom Post Type Syntax
 
+function ba_custom_post(){
+	$args = array(
+		'label' => 'Burger Menu', //name of plugin
+		'public' => true, 
+		'show_ui' => true,
+		'show_in_menu' => true,  
+		'capability_type' => 'post', 
+		'hierarchical' => false, 
+		'rewrite' => array('slug' => 'burger-slug'), // Slug referenced
+		'query_var' => true, 
+		'supports' => array('title', 'editor', 'thumbnail', 'author') // Requested parameters
+		);
+	register_post_type('burger-slug', $args); 
+
+}
+add_action('init', 'ba_custom_post'); // Custom Post Type Registered
 
 
 
