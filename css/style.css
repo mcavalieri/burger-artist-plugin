@@ -1,0 +1,15 @@
+/*
+Theme Name: Burger-Artist-Parent
+Theme URI: None
+Description: Assignment 2 - WP Plugin
+Author: Maurizio Cavalieri 1000173732  & ZiXin Lu 999699713
+Author URI: http://phoenix.sheridanc.on.ca/~ccit3394
+Version: 1.0
+Template: burger-artist-parent
+*/
+
+li {
+    background: #f2f2f2;
+    margin: 5px;
+    list-style-type: upper-roman;  /* Give shortcode bullets in uppercase roman numerals */ 
+}
